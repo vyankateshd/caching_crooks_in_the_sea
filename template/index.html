@@ -1,0 +1,103 @@
+
+  
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Illegal Fusher predictor</title>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+  </head>
+   
+  <div class="header">
+    <h1 class="logo">Fishers</h1>
+  </div>
+<style>
+*{                        /* selects all elements */
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+}
+    .header{
+  height: 100px;
+  background: #34495e; /* Background color of header */
+  padding: 0 100px;  /* for equal space between the header i.e. top and bottom padding is 0px right and left padding is 20px */
+  color: #fff;  /* for logo color*/
+}
+.logo{
+  line-height: 100px; 
+  float: left;
+  text-transform: uppercase;
+}
+body{
+	font-family: arial;
+}
+
+ input{
+ 	width: 45%;
+ 	box-sizing: border-box;
+ 	padding: 12px 5px;
+ 	border-radius: 5px;
+ 	margin: 5px;
+ 	font-weight: bold;
+ }
+ 
+</style>
+<div class = "login">
+    
+ <form action="{{ url_for('predict')}}" method="post">
+ <hr> 
+     <br>
+     <br>
+  <label  for="distance_from_shore"><b style="font-size:22px;">distance_from_shore	 :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+  <input type="text" name="distance_from_shore" placeholder=" " required="required"><br><br>
+  
+  <label for="distance_from_port"><b style="font-size:22px;">distance_from_port :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+  <input type="text" name="distance_from_port" placeholder="" required="required"><br><br>
+  
+  <label for="speed"><b style="font-size:22px;">speed :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+  <input type="text" name="speed" placeholder="" required="required"><br><br>
+  
+  <label for="course"><b style="font-size:22px;">course :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+  <input type="text" name="course" placeholder="" required="required"><br><br>
+  
+    <label for="Latitude"><b style="font-size:22px;">Latitude :&nbsp;&nbsp;</b></label>
+  <input type="text" name="Latitude" placeholder="" required="required"><br><br>
+  
+    <label for="longitude"><b style="font-size:22px;">longitude :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+  <input type="text" name="longitude" placeholder=""  required="required"><br>  <br>
+  
+ 
+  
+  <br>
+     <button type="submit" class ="btn" style="background-color:#34495e; color:#FFFFFF; width: 20%; box-sizing: border-box;
+ 	padding: 12px 5px;
+ 	border-radius: 5px;
+ 	margin: 5px;
+ 	font-weight: bold;"> Predict</button>
+</form> 
+      <br>
+    <br>
+    <h2> {{prediction_text}} </h2>
+      </div>
+    <br>
+    <br>
+    <hr>
+    <br>
+ <p><i><b>Copyright &copy; : Team Elite </b></i></p>
+          <br>
+    
+</html>
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
